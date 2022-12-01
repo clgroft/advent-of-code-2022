@@ -1,4 +1,7 @@
-module MyLib (someFunc) where
+module MyLib (solutions) where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+import Data.Array (Array, listArray)
+import Day01 (day01)
+
+solutions :: Array Int (String -> String)
+solutions = listArray (1, 25) [day01]

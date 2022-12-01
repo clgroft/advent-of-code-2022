@@ -1,8 +1,10 @@
 module Main where
 
-import qualified MyLib (someFunc)
+import Data.Array ((!))
+import MyLib (solutions)
+import System.Environment (getArgs)
 
 main :: IO ()
 main = do
-  putStrLn "Hello, Haskell!"
-  MyLib.someFunc
+  (hd : _) <- getArgs
+  interact $ solutions ! read hd
