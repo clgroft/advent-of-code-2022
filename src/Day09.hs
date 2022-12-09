@@ -7,18 +7,6 @@ import qualified Data.Set as S
 
 type Position = (Int, Int)
 
-moveUp :: Position -> Position
-moveUp (r, c) = (r - 1, c)
-
-moveDown :: Position -> Position
-moveDown (r, c) = (r + 1, c)
-
-moveLeft :: Position -> Position
-moveLeft (r, c) = (r, c - 1)
-
-moveRight :: Position -> Position
-moveRight (r, c) = (r, c + 1)
-
 data RopeState = RopeState
   { rope :: [Position], -- head of list is tail of rope
     visited :: Set Position
@@ -29,10 +17,10 @@ startState n = RopeState (replicate n (0, 0)) $ S.singleton (0, 0)
 
 moveRope :: [Position] -> String -> [Position]
 moveRope [] _ = error "empty rope"
-moveRope [p] "U" = [moveUp p]
-moveRope [p] "D" = [moveDown p]
-moveRope [p] "L" = [moveLeft p]
-moveRope [p] "R" = [moveRight p]
+moveRope [(r, c)] "U" = [(r - 1, c)]
+moveRope [(r, c)] "D" = [(r + 1, c)]
+moveRope [(r, c)] "L" = [(r, c - 1)]
+moveRope [(r, c)] "R" = [(r, c + 1)]
 moveRope [p] dir = error $ "Unrecognized direction: " <> dir
 moveRope (p : ps) dir = reconcile (head ps') p : ps'
   where
