@@ -10,6 +10,7 @@ import Day06 (day06)
 import Day07 (day07)
 import Day08 (day08)
 import Day09 (day09)
+import Day10 (day10)
 
 solutions :: Array Int (String -> String)
-solutions = listArray (1, 25) [day01, day02, day03, day04, day05, day06, day07, day08, day09]
+solutions = listArray (1, 25) [day01, day02, day03, day04, day05, day06, day07, day08, day09, day10]
