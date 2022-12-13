@@ -1,4 +1,4 @@
--- | Day 12 solution
+-- | Day 13 solution
 module Day13 (day13) where
 
 import Data.List (sort)
