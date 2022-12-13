@@ -13,6 +13,7 @@ import Day09 (day09)
 import Day10 (day10)
 import Day11 (day11)
 import Day12 (day12)
+import Day13 (day13)
 
 solutions :: Array Int (String -> String)
 solutions =
@@ -29,5 +30,6 @@ solutions =
       day09,
       day10,
       day11,
-      day12
+      day12,
+      day13
     ]
