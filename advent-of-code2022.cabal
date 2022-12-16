@@ -35,7 +35,8 @@ library
         Day12,
         Day13,
         Day14,
-        Day15
+        Day15,
+        Day16
 
 
     -- Modules included in this library but not exported.
@@ -49,7 +50,8 @@ library
         containers ^>=0.6.5.1,
         deque ^>=0.4.4,
         fgl ^>=5.8.0.0,
-        ghc ^>=9.2.5
+        ghc ^>=9.2.5,
+        megaparsec ^>=9.3.0
     hs-source-dirs:   src
     default-language: Haskell2010
     ghc-options: -O2 -Wall
